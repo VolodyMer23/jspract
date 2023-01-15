@@ -60,3 +60,20 @@
 
 // const number = user % 2 === 0 ? "Ціле" : "Не ціле";
 // console.log(number)
+
+// ЗАДАЧА 6
+// НАПИШІТЬ ПРОГРАМУ , ДЕ МИ У КОРИСТОВАЧА ПИТАЄМОСЬ МІСЯЦЬ НАРОДЖЕННЯ, І ПОКАЗУЄМО У ЯКУ ПОРУ РОКУ ВІН НАРОДИВСЯ
+
+// const question = prompt("В якому мiсяцi ти народівся?")
+
+// if (question === 12 || question === 1 || question ===2) {
+//   console.log("зима");
+// } else if (question >= 3 && question <= 5) {
+//     console.log("весно");
+// } else if (question >= 6 && question <= 8) {
+//        console.log("літо");
+// } else if (question >= 9 && question <= 11) {
+//     console.log("осінь");
+// } else {
+//     console.log("не коректна пора року");
+// }
