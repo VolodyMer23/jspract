@@ -77,3 +77,17 @@
 // } else {
 //     console.log("не коректна пора року");
 // }
+
+// ЗАДАЧА 7
+// НАПИШІТЬ ПРОГРАМУ, ЯКА ПРОВІРЯЄ ЛОГІН І ПАРОЛЬ, І ВИВОДИТЬ ПРИВІТАННЯ - ЯКЩО ВСЕ ДОБРЕ, АБО ВИДАЄ ПОМИЛКУ , ЩО НЕ ВІРНИЙ ЛОГІН
+
+// const login = "LV.gmail.com";
+// const parol = "GOIT";
+
+// const loginUser = prompt("Введіть свій логін");
+// const parolUser = prompt("Ведіть свій пароль");
+
+// const result = loginUser === login && parolUser === parol ? "Вітаю" : "Дані не коректні";
+// console.log(result);
+
+ 
