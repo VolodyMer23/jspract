@@ -13,11 +13,21 @@
 // ЗАДАЧА 2
 // ЗАПИТАТИ У КОРИСТУВАЧА ІМЯ, ПОЧТУ , ТЕЛЕФОН, І ПОКАЗАТИ У КОНСОЛІ "КОРИСТУВАЧ __ ВИКОРИСТОВУЄ  __ ПОЧТУ І __ ТЕЛЕФОН"
 
-const name = prompt("Введіть своє ім*я");
-const email = prompt("Введіть свою пошту");
-const tel = prompt("Введіть свій телефон");
+// const name = prompt("Введіть своє ім*я");
+// const email = prompt("Введіть свою пошту");
+// const tel = prompt("Введіть свій телефон");
 
-const message = `КОРИСТУВАЧ ${name} ВИКОРИСТОВУЄ ${email} ПОЧТУ І ${tel} ТЕЛЕФОН`;
-console.log(message)
+// const message = `КОРИСТУВАЧ ${name} ВИКОРИСТОВУЄ ${email} ПОЧТУ І ${tel} ТЕЛЕФОН`;
+// console.log(message)
 
+
+// ЗАДАЧА 3
+// ПОРАХУЙТЕ СУМУ ТОВАРІВ У КОРЗИНІ . ПОТРІБНО ВВЕСТИ СУМУ 3-Х ТОВАРІВ І ПОРАХУВАТИ ЇХ СУМУ
+
+// const tv = Number(prompt("Введіть ціну телевізора"));
+// const phone = Number(prompt("Введіть ціну телефону"));
+// const computer = +prompt("Введіть ціну комп'ютеру");
+
+// const sum = tv + phone + computer;
+// console.log(sum);
 
