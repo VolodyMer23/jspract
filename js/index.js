@@ -9,6 +9,16 @@
 
 // console.log(message);
 
+// const productName = productName;
+// const price = productPrice;
+
+// function makeMessage (name, price) {
+//   // Change code below this line
+//    const message = `You picked ${name}, price per item is ${price} credits`;
+//   // Change code above this line
+//   return message;
+// };
+
 
 // ЗАДАЧА 2
 // ЗАПИТАТИ У КОРИСТУВАЧА ІМЯ, ПОЧТУ , ТЕЛЕФОН, І ПОКАЗАТИ У КОНСОЛІ "КОРИСТУВАЧ __ ВИКОРИСТОВУЄ  __ ПОЧТУ І __ ТЕЛЕФОН"
@@ -136,8 +146,8 @@
 // ЗАДАЧА 9 
 // НАПИШІТЬ ЦИКЛ FOR ЯКА БУДЕ ВИВОДИТИ У КОНСОЛЬ ЧИСЛА ЗА ЗРОСТАННЯМ ВІД MIN ДО MAX, ПІСЛЯ ТОГО ЧИСЛА КРАТНІ 10
 
-const min = 10;
-const max = 100;
+// const min = 10;
+// const max = 100;
 
 // for (let i = min; i < max; i += 1) {
 //     // console.log(i);
@@ -157,11 +167,11 @@ const max = 100;
 // }
 
 
-ЗАДАЧА 10 
-НАПИШІТЬ ПРОГРАМУ, ЯКА БУДЕ ВИЗНАЧАТИ ДОВЖИНУ ІМЕНІ , ЯКЩО ІМЯ БІЛЬШЕ 7 СИМВОЛІВ, КОНСОЛЬ ВИВОДИТЬ "Wow, you  have a REALLY long name!" , ЯКЩО МЕНШЕ 7 
-"Your name isn't very long"
+// ЗАДАЧА 10 
+// НАПИШІТЬ ПРОГРАМУ, ЯКА БУДЕ ВИЗНАЧАТИ ДОВЖИНУ ІМЕНІ , ЯКЩО ІМЯ БІЛЬШЕ 7 СИМВОЛІВ, КОНСОЛЬ ВИВОДИТЬ "Wow, you  have a REALLY long name!" , ЯКЩО МЕНШЕ 7 
+// "Your name isn't very long"
 
-ЗАДАЧА 11
+// ЗАДАЧА 11
 // Используя функцию if...else,
 //напишите код, который будет спрашивать:
 //"Какое официальное название JavaScript?"
@@ -169,17 +179,17 @@ const max = 100;
 //то показать через alert: "Верно!"
 //в противном случае отобразить:"Не знаете? ECMAScript!"
 
-ЗАДАЧА 12
+// ЗАДАЧА 12
 // Напишите программу, которая получит от пользователя
 //число (количество минут) и выведет в консоль
 //строку в формате часов и минут
 // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
 // 70 === 01:10
 
-ЗАДАЧА 13
+// ЗАДАЧА 13
 //При помощи цикла for додайте все четные числа от   min до max
 
-ЗАДАЧА 14
+// ЗАДАЧА 14
 // Напишите код, который будет спрашивать
 //логин с помощью prompt и логировать результат
 //в консоль браузера
@@ -195,7 +205,7 @@ const max = 100;
 //иначе выводить строку "Неверный пароль!"
 
 
-ЗАДАЧА 15
+// ЗАДАЧА 15
 // При загрузке страницы пользователю предлагается
 //в prompt ввести число. Ввод добавляется к значению
 //переменной total.
@@ -207,14 +217,34 @@ const max = 100;
 //а не произвольный набор символов, не нужно.
 
 
-ЗАДАЧА 16
+// ЗАДАЧА 16
 //  В переменной min лежит число от 0 до 59.
 // Определите в какую четверть часа попадает
 // это число(в первую, вторую, третью или четвертую).
 
 
-ЗАДАЧА 17
+// ЗАДАЧА 17
 
 // Дана строка, состоящая из символов, например, 'abcde'.
 // Проверьте, что первым символом этой строки является буква 'a'.
 // Если это так - выведите 'да', в противном случае выведите 'нет'.
+
+
+const available = 100;
+const ordered = 800;
+const type = ordered > available ? "The order is accepted, our manager will contact you" : "Not enough goods in stock!";
+console.log(type);
+
+
+function checkStorage(available, ordered) {
+    let message;
+    // Change code below this line
+  
+    if (ordered > available) {
+      message = "Not enough goods in stock!";
+    } else {
+      message = "The order is accepted, our manager will contact you";
+    }
+   return message;
+    // Change code above this line
+  }
