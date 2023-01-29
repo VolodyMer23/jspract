@@ -248,3 +248,6 @@ function checkStorage(available, ordered) {
    return message;
     // Change code above this line
   }
+
+
+  
