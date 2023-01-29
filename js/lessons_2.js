@@ -86,3 +86,22 @@
 
 // console.log(findSmallestNumber([2, 17, 94, 1, 23, 37])); 
 // console.log(findSmallestNumber([49, 4, 83, 7, 12]));
+
+// ЗАДАЧА 4
+
+// Провірте , чи являється рядок полідромом
+// const str = "ротатор";//true
+// const newString = "Hello";//false
+
+// Варіант 1
+// const string = newString.split("");
+// // console.log(string);
+// string.reverse();
+
+// const word = string.join('');
+
+// console.log(newString === word);
+
+// Варіант 2
+// const word = newString.split("").reverse().join("");
+// console.log(newString === word);
