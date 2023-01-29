@@ -162,7 +162,7 @@
 // }
 
 // const checkNumbers = (a, b) => a > b ? `число ${a} більше ${b}` : `число ${b} більше ${a}`;
-// console.log(checkNumbers(5, 10));
+// console.log(checkNumbers(5, 10)
 
 // ЗАДАЧА 8
 // Напишіть ф-цію capitalize , яка буде приймати рядок і буде повертати новий рядок , де кожне слово буде з великої букви
@@ -191,6 +191,4 @@ function capitalize(string) {
 }
 
 console.log(capitalize("the quick brown fox"));
-
-
 
