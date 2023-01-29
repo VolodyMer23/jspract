@@ -230,24 +230,24 @@
 // Если это так - выведите 'да', в противном случае выведите 'нет'.
 
 
-const available = 100;
-const ordered = 800;
-const type = ordered > available ? "The order is accepted, our manager will contact you" : "Not enough goods in stock!";
-console.log(type);
+// const available = 100;
+// const ordered = 800;
+// const type = ordered > available ? "The order is accepted, our manager will contact you" : "Not enough goods in stock!";
+// console.log(type);
 
 
-function checkStorage(available, ordered) {
-    let message;
-    // Change code below this line
+// function checkStorage(available, ordered) {
+//     let message;
+//     // Change code below this line
   
-    if (ordered > available) {
-      message = "Not enough goods in stock!";
-    } else {
-      message = "The order is accepted, our manager will contact you";
-    }
-   return message;
-    // Change code above this line
-  }
+//     if (ordered > available) {
+//       message = "Not enough goods in stock!";
+//     } else {
+//       message = "The order is accepted, our manager will contact you";
+//     }
+//    return message;
+//     // Change code above this line
+//   }
 
 
   
