@@ -168,27 +168,53 @@
 // Напишіть ф-цію capitalize , яка буде приймати рядок і буде повертати новий рядок , де кожне слово буде з великої букви
 // // capitalize('the quick brown fox')// 'The Quick Brown Fox '
 
-function capitalize(string) {
-  const stringArray = string.split(" ");
-  const resArray = [];
+// function capitalize(string) {
+//   const stringArray = string.split(" ");
+//   const resArray = [];
 
-  for (const element of stringArray) {
-    const lowWord = element[0].toUpperCase();
+//   for (const element of stringArray) {
+//     const lowWord = element[0].toUpperCase();
 
-    // console.log(lowWord);
+//     // console.log(lowWord);
 
-    const newElement = element.slice(1);
-    // console.log(newElement);
+//     const newElement = element.slice(1);
+//     // console.log(newElement);
 
-    const result = `${lowWord}${newElement}`;
-    console.log("Рез", result);
+//     const result = `${lowWord}${newElement}`;
+//     console.log("Рез", result);
 
-    resArray.push(result);
-  }
+//     resArray.push(result);
+//   }
 
-  return resArray.join(" ");
-//   console.log(stringArray);
-}
+//   return resArray.join(" ");
+// //   console.log(stringArray);
+// }
 
-console.log(capitalize("the quick brown fox"));
+// console.log(capitalize("the quick brown fox"));
 
+// ЗАДАЧА 10
+// Напишіть скрипт,для обєкта user в послідовності:
+
+//  добавляє поле mood із значенням 'happy'
+// замінює значення hobby на 'skydiving'
+// замінює значення  premium на false
+// виводить отримане обєкта user в форматі ключ:значення використовуючи  Object.keys() и for...of
+
+//  const user = {
+//    name: "Mango",
+//    age: 20,
+//    hobby: "html",
+//    premium: true,
+// };
+
+// user.mood = "happy";
+// user.hobby = "skydiving";
+// user.premium = false;
+
+// console.log(Object.keys(user));
+
+// const keys = Object.keys(user);
+
+// for (const key of keys) {
+//   console.log(`${key} - ${user[key]}`);
+// }
