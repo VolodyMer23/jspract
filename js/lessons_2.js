@@ -1,4 +1,3 @@
-
 // ЗАДАЧА 1
 // БАЗОВІ ОПЕРАЦІЇ З МАСИВОМ
 // 1)створіть масив styles з елементами «Джаз» і «Блюз»
@@ -14,7 +13,6 @@
 // // Классика, Рок-н-ролл
 // // Рэп, Регги, Классика, Рок-н-ролл
 
-
 // const styles = ["Джаз", "Блюз"];
 
 // styles.push("Рок-н-ролл");
@@ -28,9 +26,8 @@
 // console.log(styles);
 // console.table(styles);
 
-
 // ЗАДАЧА 2
-// Напишіть ф-цію logItems(array) , яка буде получати масив і використовуючи цикл for , який для кожного елемента масива буде виводити в консоль 
+// Напишіть ф-цію logItems(array) , яка буде получати масив і використовуючи цикл for , який для кожного елемента масива буде виводити в консоль
 // повідомлення у форматі <індекс елемента> та <значення елемента>.
 // Номерація для кожного елемента масива ['Mango', 'Poly', 'Ajax'] з індексом 0 буде виведено 1 - Mango, а для индекса 2 выведет 3 - Ajax.
 
@@ -44,49 +41,43 @@
 // }
 // logItems();
 
-
 // ЗАДАЧА 3
 // Напишіть код , який шукає саме найменше число в масиві
 // // 1) напишіть циклом for
 // const numbers = [2, 17, 94, 1, 23, 37];
 // // 2) перепишіть функцією findSmallestNumber(numbers)
-// // // console.log(findSmallestNumber([2, 17, 94, 1, 23, 37])); 
+// // // console.log(findSmallestNumber([2, 17, 94, 1, 23, 37]));
 // // // console.log(findSmallestNumber([49, 4, 83, 7, 12]));
 
 //     let total = numbers[0];
 
 // for (const number of numbers) {
-  
 
 //     if (total < number) {
 //         total = number;
-       
+
 //     }
 // }
 
 //  console.log(total);
 
-
-
 // function findSmallestNumber(numbers) {
 
 //     let total = numbers[0];
-    
+
 //     for (const number of numbers) {
-  
 
 //     if (total < number) {
 //         total = number;
-       
+
 //     }
 //     }
 //     return total
 
 // }
 
-// console.log(findSmallestNumber([2, 17, 94, 1, 23, 37])); 
+// console.log(findSmallestNumber([2, 17, 94, 1, 23, 37]));
 // console.log(findSmallestNumber([49, 4, 83, 7, 12]));
-
 
 // / ЗАДАЧА 4
 
@@ -107,8 +98,6 @@
 // const word = newString.split("").reverse().join("");
 // console.log(newString === word);
 
-
-
 // ЗАДАЧА 5
 // Напишіть ф-цію calculateAverage() яка приймає довільну кількість аргументів і повертає їх середнє значення .Всі аргументи будуть тільки числовими
 
@@ -117,7 +106,7 @@
 // // console.log(calculateAverage(27, 43, 2, 8, 36));// 23.2
 
 // function calculateAverage() {
-  
+
 //     let total = 0;
 
 //     const numbers = Array.from(arguments);
@@ -133,7 +122,7 @@
 // console.log(calculateAverage(27, 43, 2, 8, 36));// 23.2
 
 // ЗАДАЧА 6
-// Напишіть ф-цію greet(name) , яка при виклику буде получати імя (як приклад , "Василь"), і логінувати рядок "Привіт, <імя>".У випадку , відсутнього 
+// Напишіть ф-цію greet(name) , яка при виклику буде получати імя (як приклад , "Василь"), і логінувати рядок "Привіт, <імя>".У випадку , відсутнього
 // відсутнього значення, виводе аргумент "Привіт , гість"
 // console.log(greet("Василь"));//Привіт Василь
 // console.log(greet());//Привіт гість
@@ -160,7 +149,7 @@
 //     if (a > b) {
 //             return `число ${a} більше ${b}`;
 //           }
-        
+
 //           return `число ${b} більше ${a}`;
 // }
 
@@ -168,9 +157,40 @@
 //     if (a > b) {
 //      return `число ${a} більше ${b}`;
 //     }
-                
+
 //      return `число ${b} більше ${a}`;
 // }
 
 // const checkNumbers = (a, b) => a > b ? `число ${a} більше ${b}` : `число ${b} більше ${a}`;
 // console.log(checkNumbers(5, 10));
+
+// ЗАДАЧА 8
+// Напишіть ф-цію capitalize , яка буде приймати рядок і буде повертати новий рядок , де кожне слово буде з великої букви
+// // capitalize('the quick brown fox')// 'The Quick Brown Fox '
+
+function capitalize(string) {
+  const stringArray = string.split(" ");
+  const resArray = [];
+
+  for (const element of stringArray) {
+    const lowWord = element[0].toUpperCase();
+
+    // console.log(lowWord);
+
+    const newElement = element.slice(1);
+    // console.log(newElement);
+
+    const result = `${lowWord}${newElement}`;
+    console.log("Рез", result);
+
+    resArray.push(result);
+  }
+
+  return resArray.join(" ");
+//   console.log(stringArray);
+}
+
+console.log(capitalize("the quick brown fox"));
+
+
+
