@@ -184,3 +184,154 @@
 //   (scientist) => scientist.dead >= 1801 && scientist.dead <= 1900
 // );
 // console.log(workNinetnth);
+
+// ЗАДАЧА 4
+// Сортування примітивів.
+// // Виконати сортування масиву цін зі спадання та зростання.
+// const prices = [2, 14, 1, 37, 26, 8];
+
+// const sort = [...prices].sort((a, b) => b - a)
+// console.log(sort);
+
+
+// ЗАДАЧА 5
+// Виконати сортування масиву назв моніторів в алфавітному та зворотному алфавітному порядку.
+// const items = ["SAMSUNG", "LG", "ASUS", "DELL", "BENQ"];
+
+// const sort = [...items].sort((a, b) => a.localeCompare(b))
+// console.log(sort);
+
+
+// ЗАДАЧА 6
+// Зібрати в allTopics масив усіх предметів всіх курсів використовуючи flatMap.
+// Використовуючи Array.prototype.filter виконати фільтрацію, залишивши в uniqueTopics тільки унікальні елементи.
+
+// const courses = [
+//   {
+//     name: "Basic HTML+CSS",
+//     topics: ["VSCode", "HTML", "CSS", "GitHub Desktop", "GitHub"],
+//   },
+//   {
+//     name: "Intermediate HTML+CSS",
+//     topics: ["VSCode", "Terminal", "Git", "GitHub", "HTML", "CSS"],
+//   },
+//   {
+//     name: "Basic JavaScript",
+//     topics: [
+//       "VSCode",
+//       "Type system",
+//       "Loops",
+//       "Functions",
+//       "Conditions",
+//       "Classes",
+//       "DOM",
+//       "Git",
+//       "GitHub",
+//     ],
+//   },
+//   {
+//     name: "Intermediate JavaScript",
+//     topics: [
+//       "VSCode",
+//       "NPM",
+//       "Bundlers",
+//       "Transpiling",
+//       "Promises",
+//       "AJAX",
+//       "Git",
+//       "GitHub",
+//     ],
+//   },
+// ];
+
+// const allTopics = courses
+//   .flatMap((course) => course.topics)
+//     .filter((topic, index, array) => array.indexOf(topic) === index);
+//   console.log(allTopics);
+
+
+// ЗАДАЧА 1
+// 1) Напишіть ф - ю конструктор яка створює обєкт person з такимим ключами:
+// const Person = {
+//   firstName,
+//   lastName,
+//   age,
+//   gender,
+//   interest,
+//   bio() {
+//     // виводить рядок Привіт {імя} мені {вік} років. Мені подобається {інтерес}
+//   },
+//   greeting() {
+//     // Привіт, я {імя}
+//   },
+// };
+// const user = new Person(
+//     "Den",
+//    "Dounot",
+//     40,
+//     "male",
+//    "React",
+//   );
+
+
+// class Task {
+//     constructor({
+//   firstName,
+//   lastName,
+//   age,
+//   gender,
+//   interest}) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.age = age;
+//         this.gender = gender;
+//         this.interest = interest;
+//     }
+//     bio() {
+//         console.log(
+//           `Привіт ${this.firstName} мені ${this.age} років. Мені подобається ${this.interest}`
+//         );
+//     }
+
+//     greeting() {
+//     console.log(`Привіт, я ${this.firstName}`)
+//   }
+
+// }
+
+// const result = new Task({
+//   firstName: "Den",
+//   lastName: "Dounot",
+//   age: 40,
+//   gender
+//         : "male", interest: "React"
+// });
+// console.log(result.greeting());
+
+
+// ЗАДАЧА 2
+// Напишіть клас User для створення користувача з наступними властивостями:
+// username - імя, рядок
+// age - вік, число
+// numberOfPosts - кількість постів, число
+// Клас очікує один параметр - об'єкт налаштувань з однойменними властивостями.
+// Добавте метод getInfo(), який повертає рядок:
+// User ${ імя } is ${ вік } years old and has ${ кількість постів } posts.
+
+
+// class User {
+//     constructor({ username, age, numberOfPosts }) {
+//         this.username = username;
+//         this.age = age;
+//         this.numberOfPosts = numberOfPosts
+//      }
+    
+//     getInfo() {
+//         return `User ${this.username} is ${this.age} years old and has ${this.numberOfPosts} posts.`
+//     }
+// }
+
+
+
+// const result = new User({ username: "Igor", age: 38, numberOfPosts: 5 })
+// console.log(result.getInfo())
