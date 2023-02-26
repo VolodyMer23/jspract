@@ -2,7 +2,6 @@
 // Створіть карточки товару з масиву використовуючи createElement
 // js/
 
-
 // import cars from "./data/cars.js"
 
 // const carsCardEl = document.querySelector(".js-goods");
@@ -10,7 +9,6 @@
 
 // const getCard = ({name, img, price, description} ) => {
 // const cardEl = document.createElement("li");
-
 
 // const nameEl = document.createElement("h2");
 // nameEl.textContent = name;
@@ -53,15 +51,14 @@
 //     const price = refs.priceEl.value;
 //     const quantity = refs.quantityEl.value;
 
-//     const total = price * quantity; 
+//     const total = price * quantity;
 
 //     refs.totalEl.textContent = total;
 
 //     refs.amountEl.textContent = quantity;
 
-    // return total;
+// return total;
 // }
-
 
 // calculator();
 // console.log(calculator());
@@ -69,9 +66,8 @@
 // window.addEventListener("DOMContentLoaded", calculator);
 // refs.formEl.addEventListener("submit", calculator);
 
-
 // // ЗАДАЧА 2.2
-// // ПЕРЕПИШІТЬ КОД , ЩОБ ЗНАЧЕННЯ МИ ОТРИМУВАЛИ ПО КЛІЦІ НА КНОПКУ , 
+// // ПЕРЕПИШІТЬ КОД , ЩОБ ЗНАЧЕННЯ МИ ОТРИМУВАЛИ ПО КЛІЦІ НА КНОПКУ ,
 // // ПРИ НАЖАТТІ ЯКОГО БУДЕ ВАМ РАХУВАТИ ТА ВИВОДИТИ РЕЗУЛЬТАТ НА ЕКРАН
 // // <button class="btn">Calculate</button>
 
@@ -118,7 +114,7 @@
 
 // const ulEl = document.querySelector(".js-list");
 // console.log(ulEl);
-  
+
 // function createCards() {
 //   const cardEl = instruments.map(({ id, img, name, price }) => {
 //     return `<li data-id="${id}"><h2>${name}</h2>
@@ -143,14 +139,12 @@
 //   console.log(id)
 //   const findProduct = instruments.find(
 //     (instrument) => instrument.id === Number(id)
-   
+
 //   );
 //   //  console.log(findProduct);
 // }
 
 // ulEl.addEventListener("click", buy);
-
-
 
 // ЗАДАЧА 4
 // ПОТРІБНО СТВОРИТИ Ф-ЦІЮ , ЯКА БУДЕ ШУКАТИ НАРЦИСА.ГОЛОВНА УМОВА НАРЦИСА ЗНАЮТЬ УСІ , НАРЦИС НЕ ЗНАЄ НІКОГО
@@ -215,16 +209,27 @@ const people3 = [
 ];
 
 function findNarciz(el) {
-  const man = el.find(
-    (people) => people.know.length === 0
-  );
+  const man = el.find((people) => people.know.length === 0);
 
-  if (man === undefined) {
-    console.log("not found")
-  } console.log(man);
-   
-  const Fna = el.filter((element) => element.know.includes(man.name));
+  if (man !== undefined) {
+    console.log(man);
+  } else {
+    console.log("not found");
+    return;
+  }
+
+  const nameNarciz = man.name;
+  console.log("Імя нарциса:", nameNarciz);
+
+  const arrObjWithoutNarciz = el.filter((people) => people.name !== nameNarciz);
+  console.log("Масив обєктів без нарциса:", arrObjWithoutNarciz);
+
+  const isEveryKnowNarciz = arrObjWithoutNarciz
+    .map((people) => people.know.includes(nameNarciz))
+    .every((el) => el);
+  console.log("Всі знають нарциса:", isEveryKnowNarciz);
 }
+
 findNarciz(people1);
 findNarciz(people2);
 findNarciz(people3);
