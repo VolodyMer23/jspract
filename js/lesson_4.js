@@ -221,18 +221,20 @@ function findNarciz(el) {
   const nameNarciz = man.name;
   console.log("Імя нарциса:", nameNarciz);
 
-  const arrObjWithoutNarciz = el.filter((people) => people.name !== nameNarciz);
-  console.log("Масив обєктів без нарциса:", arrObjWithoutNarciz);
+  const isEveryKnowNarciz = el
+    .filter((people) => people.name !== nameNarciz)
+    .every((elm) => elm.know.includes(nameNarciz));
 
-  const isEveryKnowNarciz = arrObjWithoutNarciz
-    .map((people) => people.know.includes(nameNarciz))
-    .every((el) => el);
-  console.log("Всі знають нарциса:", isEveryKnowNarciz);
+  if (isEveryKnowNarciz) {
+    console.log(`Всі знають нарциса ${nameNarciz}`);
+  } else {
+    console.log(`НЕ всі знають нарциса ${nameNarciz}`);
+  }
 }
 
-// findNarciz(people1);
-// findNarciz(people2);
-// findNarciz(people3);
+findNarciz(people1);
+findNarciz(people2);
+findNarciz(people3);
 
 // вариант Игоря
 
