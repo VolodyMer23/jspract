@@ -208,65 +208,102 @@ const people3 = [
   },
 ];
 
-function findNarciz(el) {
-  const man = el.find((people) => people.know.length === 0);
+// // Варіант Сергія Репінського
+// function findNarciz(el) {
+//   const man = el.find((people) => people.know.length === 0);
 
-  if (man !== undefined) {
-    console.log(man);
-  } else {
-    console.log("not found");
-    return;
-  }
+//   if (man !== undefined) {
+//     console.log(man);
+//   } else {
+//     console.log("not found");
+//     return;
+//   }
 
-  const nameNarciz = man.name;
-  console.log("Імя нарциса:", nameNarciz);
+//   const nameNarciz = man.name;
+//   console.log("Імя нарциса:", nameNarciz);
 
-  const isEveryKnowNarciz = el
-    .filter((people) => people.name !== nameNarciz)
-    .every((elm) => elm.know.includes(nameNarciz));
+//   const isEveryKnowNarciz = el
+//     .filter((people) => people.name !== nameNarciz)
+//     .every((elm) => elm.know.includes(nameNarciz));
 
-  if (isEveryKnowNarciz) {
-    console.log(`Всі знають нарциса ${nameNarciz}`);
-  } else {
-    console.log(`НЕ всі знають нарциса ${nameNarciz}`);
-  }
-}
+//   if (isEveryKnowNarciz) {
+//     console.log(`Всі знають нарциса ${nameNarciz}`);
+//   } else {
+//     console.log(`НЕ всі знають нарциса ${nameNarciz}`);
+//   }
+// }
 
-findNarciz(people1);
-findNarciz(people2);
-findNarciz(people3);
+// findNarciz(people1);
+// findNarciz(people2);
+// findNarciz(people3);
 
-// вариант Игоря
 
-function findNarciz(element) {
-  const narciz = element.filter((el) => el.know.length === 0);
-  // console.log(narciz);
-  let nameNarciz;
+// вариант Игоря Вінника
 
-  for (const man of narciz) {
-    // console.log(man);
-    nameNarciz = man.name;
-  }
-  // console.log(nameNarciz);
+// function findNarciz(element) {
+//   const narciz = element.filter((el) => el.know.length === 0);
+//   // console.log(narciz);
+//   let nameNarciz;
 
-  if (narciz.length !== 0) {
-    console.log(`narciz: ${nameNarciz}`);
-  } else {
-    console.log("not found");
-    return;
-  }
+//   for (const man of narciz) {
+//     // console.log(man);
+//     nameNarciz = man.name;
+//   }
+//   // console.log(nameNarciz);
 
-  const withotNarciz = element
-    .filter((el) => el.name !== nameNarciz)
-    .every((el) => el.know.includes(nameNarciz));
-  // console.log(withotNarciz);
-  if (withotNarciz === true) {
-    console.log(`Всі знають нарциса ${nameNarciz}`);
-  } else {
-    console.log(`Не всі знають нарциса ${nameNarciz}`);
-  }
-}
+//   if (narciz.length !== 0) {
+//     console.log(`narciz: ${nameNarciz}`);
+//   } else {
+//     console.log("not found");
+//     return;
+//   }
 
-findNarciz(people1);
-findNarciz(people2);
-findNarciz(people3);
+//   const withotNarciz = element
+//     .filter((el) => el.name !== nameNarciz)
+//     .every((el) => el.know.includes(nameNarciz));
+//   // console.log(withotNarciz);
+//   if (withotNarciz === true) {
+//     console.log(`Всі знають нарциса ${nameNarciz}`);
+//   } else {
+//     console.log(`Не всі знають нарциса ${nameNarciz}`);
+//   }
+// }
+
+// findNarciz(people1);
+// findNarciz(people2);
+// findNarciz(people3);
+
+
+
+// Варіант Юлія
+
+// function findNarciz(el) {
+//   const man = el.find((people) => people.know.length === 0);
+
+//   if (man === undefined) {
+//     console.log(`"Narciss is not found"`);
+//     return;
+//   }
+//   const notNarcis = el.filter((people) => people.know.length !== 0);
+
+//   const narcissName = man.name;
+//   console.log(` Narciss is ${man.name}`);
+//   let friends = [];
+
+//   for (let nameAr of notNarcis) {
+//     let friend = nameAr.know;
+
+//     if (friend.includes(narcissName)) {
+//       friends.push(friend);
+//     }
+//   }
+//   if (friends.length === notNarcis.length) {
+//     console.log(`"Everybody knows ${narcissName}"`);
+//   } else
+//     console.log(
+//       `"Not everybody knows ${narcissName}, ${narcissName} isn't exactly narciss"`
+//     );
+// }
+// findNarciz(people1);
+// findNarciz(people2);
+// findNarciz(people3);
