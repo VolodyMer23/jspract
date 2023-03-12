@@ -80,6 +80,16 @@ body {
   justify-content: center;
 }
 
+p {
+  line-height: 20px;
+}
+.container {
+  height: 1800px;
+  width: 500px;
+  margin: 100px auto;
+}
+
+
 .title {
   color: white;
   font-size: 7vw;
