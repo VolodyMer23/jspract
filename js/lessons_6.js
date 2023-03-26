@@ -61,10 +61,10 @@
 // //
 // fetch(`https://api.github.com/search/users?q=${}&client_id=67684cabc84f94f0938e&client_secret=782ea639550c1b5d986bdd8129813652ed04c92c`)
 
-// const form = document.querySelector("#form");
-// const input = document.querySelector("#input");
-// const render = document.querySelector(".render");
-// const loadMoreBtn = document.querySelector(".load-more");
+const form = document.querySelector("#form");
+const input = document.querySelector("#input");
+const render = document.querySelector(".render");
+const loadMoreBtn = document.querySelector(".load-more");
 // let count = 1;
 
 // form.addEventListener("submit", handleFormSubmit);
@@ -85,3 +85,21 @@
 //   const elementMarkup = elements.map(({ login, avatar_url }) => `<h2>${login}</h2><img src="${avatar_url}" alt="${login}">`).join("");
 //   render.insertAdjacentHTML("beforeend", elementMarkup);
 // }
+
+// https://api.github.com/search/repositories?q=Q
+ 
+function handleForm(e) {
+  e.preventDefault();
+  const inputValue = input.value;
+
+  
+  fetch(
+      `https://api.github.com/search/repositories?q=${inputValue}&client_id=67684cabc84f94f0938e&client_secret=782ea639550c1b5d986bdd8129813652ed04c92c&per_page=5&page=1`
+      )
+      .then((data) => data.json())
+      .then((data) => console.log(data))
+    //   .then(() => (count += 1))
+      .catch((err) => console.log(err));
+}
+    
+    form.addEventListener("submit", handleForm);
